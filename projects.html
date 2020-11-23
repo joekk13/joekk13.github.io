@@ -9289,7 +9289,7 @@ Small Device Styles
                                 <p>Omron Hornet 565 Capstone</p>
                             </div>
                         </div>
-                        <img src="./images/Projects/Hornet.jpg" class="img img-responsive img-centered" alt="">
+                        <img src="./images/Projects/Capstone/Outside.jpg" class="img img-responsive img-centered" alt="">
                     </a>
                     <!-- <div class="portfolio-caption"> -->
                     <!-- <h4>Omron Hornet 565 Capstone</h4> -->
@@ -9307,7 +9307,7 @@ Small Device Styles
                                 <p>Robotic Collaboration for Timber Construction</p>
                             </div>
                         </div>
-                        <img src="./images/Projects/Timber.PNG" class="img img-responsive img-centered" alt="">
+                        <img src="./images/Projects/Timber/Outside.PNG" class="img img-responsive img-centered" alt="">
                     </a>
                     <!-- <div class="portfolio-caption"> -->
                     <!-- <h4>Robotic Collaboration for Timber Construction</h4> -->
@@ -9325,7 +9325,7 @@ Small Device Styles
                                 <p>AgPods</p>
                             </div>
                         </div>
-                        <img src="./images/Projects/Agpods.PNG" class="img img-responsive img-centered" alt="">
+                        <img src="./images/Projects/Agpods/Outside.PNG" class="img img-responsive img-centered" alt="">
                     </a>
                     <!-- <div class="portfolio-caption"> -->
                     <!-- <h4>AgPods</h4> -->
@@ -9354,7 +9354,7 @@ Small Device Styles
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Multi-Robot Control</h2>
+                            <h2>Omron Hornet 565 Capstone</h2>
                             <hr class="star-primary">
 
                             <p>
@@ -9363,10 +9363,10 @@ Small Device Styles
                                 <div class="resp-portfolio-container"
                                     style="overflow:visible; padding-bottom:30%; top:5%; ">
                                     <div class="container">
-                                        <img src="img/trossen/trossen_2.JPG" class="resp-portfolio-img"
+                                        <img src="./images/Projects/Capstone/1.PNG" class="resp-portfolio-img"
                                             style="max-width:80%; left:10%" </img> <div
                                             class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
-                                        <p>An image of the unmounted dual arm setup</p>
+                                        <p>Image showing the raw Delta Robot with its workspace</p>
                                     </div>
                                 </div>
                         </div>
@@ -9375,7 +9375,7 @@ Small Device Styles
                         <h3>Code</h3>
                         <p>For code and documentation, please visit:
                             <a style="color:#1b03a3" target="_blank"
-                                href="https://github.com/jomian78/interbotix_ros_arms">dynamic_animal_testing_environment</a>
+                                href="https://github.com/joekk13">Repository</a>
                         </p>
 
                         <h3>Overview</h3>
@@ -9447,74 +9447,6 @@ Small Device Styles
                     <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
                 </div>
 
-                <h4>2 - Visualization and Virtual Objects</h4>
-                <p>Each arm in the testing
-                    environment has its own control node that is responsible for interfacing with the actual hardware -
-                    accepting joint and end-effector commands through
-                    Dynamixel's Protocol 2.0. <a style="color:#1b03a3" target="_blank"
-                        href="http://wiki.ros.org/message_filters">Message_filters</a> were used to read current joint
-                    states
-                    from each arm and send them to a combined <b>/testing_environment/joint_states</b> topic that
-                    enables
-                    users to visualize the environment in real-time through Rviz.
-                    I used MoveIt's <a style="color:#1b03a3" target="_blank"
-                        href="http://docs.ros.org/melodic/api/moveit_core/html/classplanning__scene_1_1PlanningScene.html">PlanningScene</a>
-                    class
-                    to add virtual collision objects to the environment, such as the perch the rodents will enter
-                    the environment from when they are presented with objects. Ground planes and other types of
-                    constraints can
-                    also be specified through this class.
-                    A side-by-side demo of a real-world motion plan with an Rviz environment and
-                    virtual perch object can be seen below.
-                </p>
-
-                <!-- rviz and back waypoints -->
-                <div class="resp-portfolio-container" style="width:92%; left:5%;">
-                    <iframe class="resp-iframe" style="float:center;" src="https://player.vimeo.com/video/379391388"
-                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
-                </div>
-
-                <h4>3 - Manual Waypoint Setting</h4>
-                <p>Since the primary users of this environment may not have much experience with ROS or robotic
-                    hardware,
-                    I created a set of nodes that enables users to specify waypoints by manually manipulating the arms.
-                    This feature will be particularly
-                    useful for specifying robot arm poses that have very tight clearances, or for quickly adding a new
-                    pose
-                    to an experiment. A demo of the manual waypoints feature can be seen below. </p>
-
-                <!-- manual waypoints -->
-                <div class="resp-portfolio-container" style="width:92%; left:5%;">
-                    <iframe class="resp-iframe" style="float:center;" src="https://player.vimeo.com/video/379391521"
-                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
-                </div>
-
-                <h3> Behavioral Decision Process </h3>
-
-                <p>During experimental trials, a rodent will enter the testing environment and be
-                    presented with at least two objects. These objects may differ in shape, color,
-                    or texture. If the rodent appears to "choose" one of the objects (by sensing it
-                    with its whiskers or touching it with its paws), the arm holding that
-                    object will replace it with a different object as part of a user-specified
-                    sequence.</p>
-
-                <div class="resp-portfolio-container" style="overflow: visible; padding-bottom:20%;">
-                    <div class="container">
-                        <img src="img/trossen/trossen_behavioral_decision_v2.png" class="resp-portfolio-img" </img> <div
-                            class="resp-portfolio-img-caption" style="bottom:-5%;">
-                        <p>Model of presented object sequence based on rodent's decisions</p>
-                    </div>
-                </div>
-            </div>
-
-            <p>A new object may be presented to the rodent at a different position within
-                the rodent's whisker receptive field, or be placed on another side of the environment.
-                A stepper motor with multiple objects may be attached to the end effector to enable
-                quick object swapping. Other future work includes force control on larger objects, and motion
-                planning integration with IR or RGBD cameras.
-            </p>
 
             <h3>Live Rodent Trials</h3>
             <p>Coming soon!</p>
@@ -9555,155 +9487,125 @@ Small Device Styles
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Generative Adversarial Networks</h2>
+                            <h2>Robotic Collaboration for Timber Construction</h2>
                             <hr class="star-primary">
-                            <!-- <img src="img/portfolio/" class="img-responsive img-centered" alt=""> -->
+
                             <p>
-                                <!-- <h3 style="padding-top:2%;">Overview</h3>
-<p>The goal of this project was to implement a Generative Adversarial Network
-  for 2-D and 3-D datasets. I wanted to create a GAN that could generate 3-D
-  points clouds of various objects with occlusions or data gaps built in to
-  each sample in order to train a different object detection network to
-  more successfully localize objects.</p> -->
-
                                 <!-- Skill buttons -->
-                                <!-- <button class="skill-tags">Python</button>
-<button class="skill-tags">Deep Learning</button>
-<button class="skill-tags">Keras</button>
-<button class="skill-tags">Rviz</button> -->
 
-                                <div class="row" style="float:bottom;">
-                                    <div class="column2" style="width:50%">
-                                        <div class="container">
-                                            <img src="img/gan/linear_gan_1.gif" class="column2-img" style="width:30%;"
-                                                </img> </div> </div> <div class="column2" style="width:50%">
-                                            <div class="container">
-                                                <img src="img/gan/linear_gan_2.gif" class="column2-img"
-                                                    style="width:30%;" </img> </div> </div> </div> <div class="row"
-                                                    style="float:bottom;">
-                                                <div class="column2" style="width:50%">
-                                                    <div class="container">
-                                                        <img src="img/gan/dcgan_gen_3.png" class="column2-img"
-                                                            style="width:30%;" </img> </div> </div> <div class="column2"
-                                                            style="width:50%">
-                                                        <div class="container">
-                                                            <img src="img/gan/dc_gan_fashion_2.png" class="column2-img"
-                                                                style="width:30%;" </img> </div> </div> </div> <h3>Code
-                                                            </h3>
-                                                            <p> For more information, please visit:
-                                                                <a style="color:#1b03a3" target="_blank"
-                                                                    href="https://github.com/jomian78/2d_image_gans">2-D
-                                                                    Image GANs</a>
-                                                            </p>
-
-                                                            <h3>Background</h3>
-                                                            <p>The basic idea behind a generative adversarial network is
-                                                                to pit two
-                                                                different machine learning models against each other in
-                                                                a min-max game.
-                                                                Both networks - one called a "generator" and one called
-                                                                a "discriminator",
-                                                                attempt to minimize their loss functions at the behest
-                                                                of the other model.
-                                                                The goal of the generator is to create data that matches
-                                                                the variation and
-                                                                distribution of some target data set. In theory, this
-                                                                synthetic data could be
-                                                                used to train other models with the same level of
-                                                                success as "real" data if
-                                                                it truly matches a target data set's variety and
-                                                                distribution. On the other
-                                                                hand, the goal of the discriminator is to be able to
-                                                                discern "real" data
-                                                                from "fake" data created by the generator.</p>
-
-                                                            <div class="resp-portfolio-container">
-                                                                <div class="container">
-                                                                    <img src="img/gan/basic_gan_block_diagram_boxes.png"
-                                                                        class="resp-portfolio-img" </img> <div
-                                                                        class="resp-portfolio-img-caption"
-                                                                        style="bottom:2%;">
-                                                                    <p>Block diagram of a basic GAN</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <p>The ideal training outcome is to have both models reach a
-                                                            sort of Nash
-                                                            equilibrium with each other. If the discriminator becomes
-                                                            too good at
-                                                            discerning real data from fake data early on in the training
-                                                            process,
-                                                            your generator may not be able to create progressively more
-                                                            "realistic"
-                                                            data with each training run. On the other hand, your
-                                                            generator can overpower
-                                                            your discriminator with garbage data that does not resemble
-                                                            the target data
-                                                            set.</p>
+                                <div class="resp-portfolio-container"
+                                    style="overflow:visible; padding-bottom:30%; top:5%; ">
+                                    <div class="container">
+                                        <img src="./images/Projects/Capstone/1.PNG" class="resp-portfolio-img"
+                                            style="max-width:80%; left:10%" </img> <div
+                                            class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
+                                        <p>Image showing the raw Delta Robot with its workspace</p>
+                                    </div>
+                                </div>
+                        </div>
 
 
-                                                        <h3>2-D Architectures</h3>
-                                                        <p>I implemented a Deep Convolutional architecture (DCGAN) to
-                                                            generate data that
-                                                            matched the variety and distribution of MNIST and
-                                                            MNIST FASHION datasets. I also implemented a shallow,
-                                                            two-layer architecture to
-                                                            generate plot points that matched the distribution of an
-                                                            unknown function in a
-                                                            2-D coordinate space.</p>
+                        <h3>Code</h3>
+                        <p>For code and documentation, please visit:
+                            <a style="color:#1b03a3" target="_blank"
+                                href="https://github.com/joekk13">Repository</a>
+                        </p>
 
-                                                        <div class="resp-portfolio-container"
-                                                            style="overflow:visible; padding-bottom:2%; ">
-                                                            <div class="container">
-                                                                <img src="img/gan/linear_gan_architecture.png"
-                                                                    class="resp-portfolio-img"
-                                                                    style="max-width:100%; left:2%; height:auto;" </img>
-                                                                    <div class="resp-portfolio-img-caption"
-                                                                    style="bottom:-10%;">
-                                                                <p>Shallow architecture for 2-D plots</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                        <h3>Overview</h3>
 
-                                                    <div class="resp-portfolio-container"
-                                                        style="overflow:visible; padding-bottom:30%;">
-                                                        <div class="container">
-                                                            <img src="img/gan/2d_gan_block_diagram_thicker.png"
-                                                                class="resp-portfolio-img"
-                                                                style="max-width:100%; left:2%; height:auto;" </img>
-                                                                <div class="resp-portfolio-img-caption"
-                                                                style="bottom:-5%;">
-                                                            <p>DCGAN architecture for 2-D images</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="resp-portfolio-container" style="overflow:visible; padding-bottom:20%; top:5%; ">
+                            <div class="container">
+                                <img src="img/trossen/system_overview.png" class="resp-portfolio-img"
+                                    style="max-width:100%; left:0%" </img> <div class="resp-portfolio-img-caption"
+                                    style="bottom:0%;">
+                                <p>Overview of Testing Environment</p>
+                            </div>
+                        </div>
+                    </div>
 
-                                                <h3>3-D Architectures</h3>
-                                                <p>Coming soon!</p>
-                            </p>
+                    <p>For my final project in the MSR program, I am creating a dynamic testing
+                        environment that uses multiple robot arms to present objects
+                        and various stimuli to rodents. The goal is to measure rodents' behavioral
+                        responses and track their whisker movements as they
+                        sense the objects and interact with the arms.</p>
 
-                            <!-- <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul> -->
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i
-                                    class="fa fa-times"></i> Close</button>
+                    <h3>ROS Implementation and Hardware</h3>
+                    <p>I am using two WidowX 200 arms from <a style="color:#1b03a3" target="_blank"
+                            href="https://www.trossenrobotics.com/widowx-200-robot-arm.aspx">Trossen Robotics</a>.
+                        The Dynamixel motors on the robot arms can be sent position, velocity, and effort
+                        values over 3 Pin TTL enabled by U2D2 USB communication converters from
+                        <a style="color:#1b03a3" target="_blank" href="http://www.robotis.us/u2d2/">Robotis</a>.</p>
+
+                    <div class="resp-portfolio-container" style="margin-bottom:-10%;">
+                        <div class="container">
+                            <img src="img/trossen/u2d2_dynamixel_connection.png" class="resp-portfolio-img" </img> <div
+                                class="resp-portfolio-img-caption" style="bottom:35%;">
+                            <p>PC to Dynamixel Connection (credit: Trossen Robotics)</p>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <p>The arms are controlled within a ROS framework that enables researchers to easily
+                    program behavioral experiments. I am using <a style="color:#1b03a3" target="_blank"
+                        href="https://moveit.ros.org/">MoveIt</a>
+                    to generate robot arm motion plans while avoiding collisions with both rodents
+                    and testing environment fixtures. All programming for this project is being
+                    completed in C++, but non-technical users will be able to specify trajectory
+                    sequences by manually manipulating the arms and saving each pose through a
+                    custom GUI created in <a style="color:#1b03a3" target="_blank"
+                        href="https://docs.ros.org/melodic/api/librviz_tutorial/html/index.html">Librviz</a>.
+                    Users will be able to place path constraints and virtual structures in the
+                    planning scene through this interface. In the future, waypoints may also be
+                    specified through a Python API, or loaded yaml config file.
+                </p>
+
+                <h3>Feature Demos:</h3>
+                <h4>1 - MoveIt Planning Interface</h4>
+                <p>Users can specify waypoints to one or more arms in the testing environment
+                    by using the <a style="color:#1b03a3" target="_blank"
+                        href="http://docs.ros.org/melodic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html">MoveGroupInterface</a>
+                    class.
+                    A URDF file combining both arms in the testing environment was written to enable collision checking
+                    without
+                    external sensors. A relative position and orientation offset between the two arms can be passed in
+                    as
+                    a set of ROS parameters at runtime, enabling users to seamlessly change the positions of the arms
+                    for different experimental setups while still having collision checking. A demo showcasing both
+                    arms moving to a set of user-specified waypoints can be seen below.</p>
+
+                <!-- side and back waypoints -->
+                <div class="resp-portfolio-container" style="width:92%; left:5%;">
+                    <iframe class="resp-iframe" style="float:center;" src="https://player.vimeo.com/video/379391261"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
+                </div>
+
+
+            <h3>Live Rodent Trials</h3>
+            <p>Coming soon!</p>
+            </p>
+
+            <!-- <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                            </ul> -->
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                Close</button>
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <div class="portfolio-modal modal fade" id="Agpods" tabindex="-1" role="dialog" aria-hidden="true">
@@ -9718,156 +9620,127 @@ Small Device Styles
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Generative Adversarial Networks</h2>
+                            <h2>AgPods</h2>
                             <hr class="star-primary">
-                            <!-- <img src="img/portfolio/" class="img-responsive img-centered" alt=""> -->
+
                             <p>
-                                <!-- <h3 style="padding-top:2%;">Overview</h3>
-<p>The goal of this project was to implement a Generative Adversarial Network
-  for 2-D and 3-D datasets. I wanted to create a GAN that could generate 3-D
-  points clouds of various objects with occlusions or data gaps built in to
-  each sample in order to train a different object detection network to
-  more successfully localize objects.</p> -->
-
                                 <!-- Skill buttons -->
-                                <!-- <button class="skill-tags">Python</button>
-<button class="skill-tags">Deep Learning</button>
-<button class="skill-tags">Keras</button>
-<button class="skill-tags">Rviz</button> -->
 
-                                <div class="row" style="float:bottom;">
-                                    <div class="column2" style="width:50%">
-                                        <div class="container">
-                                            <img src="img/gan/linear_gan_1.gif" class="column2-img" style="width:30%;"
-                                                </img> </div> </div> <div class="column2" style="width:50%">
-                                            <div class="container">
-                                                <img src="img/gan/linear_gan_2.gif" class="column2-img"
-                                                    style="width:30%;" </img> </div> </div> </div> <div class="row"
-                                                    style="float:bottom;">
-                                                <div class="column2" style="width:50%">
-                                                    <div class="container">
-                                                        <img src="img/gan/dcgan_gen_3.png" class="column2-img"
-                                                            style="width:30%;" </img> </div> </div> <div class="column2"
-                                                            style="width:50%">
-                                                        <div class="container">
-                                                            <img src="img/gan/dc_gan_fashion_2.png" class="column2-img"
-                                                                style="width:30%;" </img> </div> </div> </div> <h3>Code
-                                                            </h3>
-                                                            <p> For more information, please visit:
-                                                                <a style="color:#1b03a3" target="_blank"
-                                                                    href="https://github.com/jomian78/2d_image_gans">2-D
-                                                                    Image GANs</a>
-                                                            </p>
-
-                                                            <h3>Background</h3>
-                                                            <p>The basic idea behind a generative adversarial network is
-                                                                to pit two
-                                                                different machine learning models against each other in
-                                                                a min-max game.
-                                                                Both networks - one called a "generator" and one called
-                                                                a "discriminator",
-                                                                attempt to minimize their loss functions at the behest
-                                                                of the other model.
-                                                                The goal of the generator is to create data that matches
-                                                                the variation and
-                                                                distribution of some target data set. In theory, this
-                                                                synthetic data could be
-                                                                used to train other models with the same level of
-                                                                success as "real" data if
-                                                                it truly matches a target data set's variety and
-                                                                distribution. On the other
-                                                                hand, the goal of the discriminator is to be able to
-                                                                discern "real" data
-                                                                from "fake" data created by the generator.</p>
-
-                                                            <div class="resp-portfolio-container">
-                                                                <div class="container">
-                                                                    <img src="img/gan/basic_gan_block_diagram_boxes.png"
-                                                                        class="resp-portfolio-img" </img> <div
-                                                                        class="resp-portfolio-img-caption"
-                                                                        style="bottom:2%;">
-                                                                    <p>Block diagram of a basic GAN</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <p>The ideal training outcome is to have both models reach a
-                                                            sort of Nash
-                                                            equilibrium with each other. If the discriminator becomes
-                                                            too good at
-                                                            discerning real data from fake data early on in the training
-                                                            process,
-                                                            your generator may not be able to create progressively more
-                                                            "realistic"
-                                                            data with each training run. On the other hand, your
-                                                            generator can overpower
-                                                            your discriminator with garbage data that does not resemble
-                                                            the target data
-                                                            set.</p>
+                                <div class="resp-portfolio-container"
+                                    style="overflow:visible; padding-bottom:30%; top:5%; ">
+                                    <div class="container">
+                                        <img src="./images/Projects/Capstone/1.PNG" class="resp-portfolio-img"
+                                            style="max-width:80%; left:10%" </img> <div
+                                            class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
+                                        <p>Image showing the raw Delta Robot with its workspace</p>
+                                    </div>
+                                </div>
+                        </div>
 
 
-                                                        <h3>2-D Architectures</h3>
-                                                        <p>I implemented a Deep Convolutional architecture (DCGAN) to
-                                                            generate data that
-                                                            matched the variety and distribution of MNIST and
-                                                            MNIST FASHION datasets. I also implemented a shallow,
-                                                            two-layer architecture to
-                                                            generate plot points that matched the distribution of an
-                                                            unknown function in a
-                                                            2-D coordinate space.</p>
+                        <h3>Code</h3>
+                        <p>For code and documentation, please visit:
+                            <a style="color:#1b03a3" target="_blank"
+                                href="https://github.com/joekk13">Repository</a>
+                        </p>
 
-                                                        <div class="resp-portfolio-container"
-                                                            style="overflow:visible; padding-bottom:2%; ">
-                                                            <div class="container">
-                                                                <img src="img/gan/linear_gan_architecture.png"
-                                                                    class="resp-portfolio-img"
-                                                                    style="max-width:100%; left:2%; height:auto;" </img>
-                                                                    <div class="resp-portfolio-img-caption"
-                                                                    style="bottom:-10%;">
-                                                                <p>Shallow architecture for 2-D plots</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                        <h3>Overview</h3>
 
-                                                    <div class="resp-portfolio-container"
-                                                        style="overflow:visible; padding-bottom:30%;">
-                                                        <div class="container">
-                                                            <img src="img/gan/2d_gan_block_diagram_thicker.png"
-                                                                class="resp-portfolio-img"
-                                                                style="max-width:100%; left:2%; height:auto;" </img>
-                                                                <div class="resp-portfolio-img-caption"
-                                                                style="bottom:-5%;">
-                                                            <p>DCGAN architecture for 2-D images</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        <div class="resp-portfolio-container" style="overflow:visible; padding-bottom:20%; top:5%; ">
+                            <div class="container">
+                                <img src="img/trossen/system_overview.png" class="resp-portfolio-img"
+                                    style="max-width:100%; left:0%" </img> <div class="resp-portfolio-img-caption"
+                                    style="bottom:0%;">
+                                <p>Overview of Testing Environment</p>
+                            </div>
+                        </div>
+                    </div>
 
-                                                <h3>3-D Architectures</h3>
-                                                <p>Coming soon!</p>
-                            </p>
+                    <p>For my final project in the MSR program, I am creating a dynamic testing
+                        environment that uses multiple robot arms to present objects
+                        and various stimuli to rodents. The goal is to measure rodents' behavioral
+                        responses and track their whisker movements as they
+                        sense the objects and interact with the arms.</p>
 
-                            <!-- <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul> -->
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i
-                                    class="fa fa-times"></i> Close</button>
+                    <h3>ROS Implementation and Hardware</h3>
+                    <p>I am using two WidowX 200 arms from <a style="color:#1b03a3" target="_blank"
+                            href="https://www.trossenrobotics.com/widowx-200-robot-arm.aspx">Trossen Robotics</a>.
+                        The Dynamixel motors on the robot arms can be sent position, velocity, and effort
+                        values over 3 Pin TTL enabled by U2D2 USB communication converters from
+                        <a style="color:#1b03a3" target="_blank" href="http://www.robotis.us/u2d2/">Robotis</a>.</p>
+
+                    <div class="resp-portfolio-container" style="margin-bottom:-10%;">
+                        <div class="container">
+                            <img src="img/trossen/u2d2_dynamixel_connection.png" class="resp-portfolio-img" </img> <div
+                                class="resp-portfolio-img-caption" style="bottom:35%;">
+                            <p>PC to Dynamixel Connection (credit: Trossen Robotics)</p>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <p>The arms are controlled within a ROS framework that enables researchers to easily
+                    program behavioral experiments. I am using <a style="color:#1b03a3" target="_blank"
+                        href="https://moveit.ros.org/">MoveIt</a>
+                    to generate robot arm motion plans while avoiding collisions with both rodents
+                    and testing environment fixtures. All programming for this project is being
+                    completed in C++, but non-technical users will be able to specify trajectory
+                    sequences by manually manipulating the arms and saving each pose through a
+                    custom GUI created in <a style="color:#1b03a3" target="_blank"
+                        href="https://docs.ros.org/melodic/api/librviz_tutorial/html/index.html">Librviz</a>.
+                    Users will be able to place path constraints and virtual structures in the
+                    planning scene through this interface. In the future, waypoints may also be
+                    specified through a Python API, or loaded yaml config file.
+                </p>
+
+                <h3>Feature Demos:</h3>
+                <h4>1 - MoveIt Planning Interface</h4>
+                <p>Users can specify waypoints to one or more arms in the testing environment
+                    by using the <a style="color:#1b03a3" target="_blank"
+                        href="http://docs.ros.org/melodic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html">MoveGroupInterface</a>
+                    class.
+                    A URDF file combining both arms in the testing environment was written to enable collision checking
+                    without
+                    external sensors. A relative position and orientation offset between the two arms can be passed in
+                    as
+                    a set of ROS parameters at runtime, enabling users to seamlessly change the positions of the arms
+                    for different experimental setups while still having collision checking. A demo showcasing both
+                    arms moving to a set of user-specified waypoints can be seen below.</p>
+
+                <!-- side and back waypoints -->
+                <div class="resp-portfolio-container" style="width:92%; left:5%;">
+                    <iframe class="resp-iframe" style="float:center;" src="https://player.vimeo.com/video/379391261"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
+                </div>
+
+
+            <h3>Live Rodent Trials</h3>
+            <p>Coming soon!</p>
+            </p>
+
+            <!-- <ul class="list-inline item-details">
+                                <li>Client:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                                <li>Service:
+                                    <strong><a href="http://startbootstrap.com"></a>
+                                    </strong>
+                                </li>
+                            </ul> -->
+            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
+                Close</button>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
 
 
     <!-- jQuery Version 1.11.0 -->
