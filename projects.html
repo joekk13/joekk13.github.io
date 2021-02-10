@@ -9273,7 +9273,7 @@ Small Device Styles
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Projects (Under Construction ...)</h2>
+                    <h2 class="section-heading">My Projects</h2>
                     <!-- <h3 class="section-subheading text-muted">Research experience and industry projects</h3> -->
                     <h3 class="section-subheading">B.S in Mechanical Engineering</h3>
                 </div>
@@ -9322,7 +9322,7 @@ Small Device Styles
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <!-- <i class="fa fa-plus fa-3x"></i> -->
-                                <p>AgPods</p>
+                                <p>Design Exploration for Indoor Agricultural System</p>
                             </div>
                         </div>
                         <img src="./images/Projects/Agpods/Outside.PNG" class="img img-responsive img-centered" alt="">
@@ -9642,118 +9642,90 @@ Small Device Styles
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>AgPods</h2>
+                            <h2>Design Exploration for Indoor Agricultural System</h2>
                             <hr class="star-primary">
 
                             <p>
                                 <!-- Skill buttons -->
 
-                                <!-- <div class="resp-portfolio-container"
-                                    style="overflow:visible; padding-bottom:30%; top:5%; ">
+                                <div class="resp-portfolio-container"
+                                    style="overflow:visible; padding-bottom:25%; top:5%; ">
                                     <div class="container">
-                                        <img src="./images/Projects/Capstone/1.PNG" class="resp-portfolio-img"
+                                        <img src="./images/Projects/Agpods/Overall.png" class="resp-portfolio-img"
                                             style="max-width:80%; left:10%" </img> <div
                                             class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
-                                        <p>Image showing the raw Delta Robot with its workspace</p>
+                                        <p>Starting Plant Geometry</p>
                                     </div>
                                 </div>
                         </div>
 
 
-                        <h3>Code</h3>
-                        <p>For code and documentation, please visit:
-                            <a style="color:#1b03a3" target="_blank"
-                                href="https://github.com/joekk13">Repository</a>
-                        </p>
 
-                        <h3>Overview</h3>
 
-                        <div class="resp-portfolio-container" style="overflow:visible; padding-bottom:20%; top:5%; ">
-                            <div class="container">
-                                <img src="img/trossen/system_overview.png" class="resp-portfolio-img"
-                                    style="max-width:100%; left:0%" </img> <div class="resp-portfolio-img-caption"
-                                    style="bottom:0%;">
-                                <p>Overview of Testing Environment</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Overview</h3>
 
-                    <p>For my final project in the MSR program, I am creating a dynamic testing
-                        environment that uses multiple robot arms to present objects
-                        and various stimuli to rodents. The goal is to measure rodents' behavioral
-                        responses and track their whisker movements as they
-                        sense the objects and interact with the arms.</p>
 
-                    <h3>ROS Implementation and Hardware</h3>
-                    <p>I am using two WidowX 200 arms from <a style="color:#1b03a3" target="_blank"
-                            href="https://www.trossenrobotics.com/widowx-200-robot-arm.aspx">Trossen Robotics</a>.
-                        The Dynamixel motors on the robot arms can be sent position, velocity, and effort
-                        values over 3 Pin TTL enabled by U2D2 USB communication converters from
-                        <a style="color:#1b03a3" target="_blank" href="http://www.robotis.us/u2d2/">Robotis</a>.</p>
+                    <p>This research project examined the design exploration of autonomous indoor agricultural systems. My responsibilities 
+                        included executing algorithms similar to a "convex hull" feature on Rhino-Grasshopper to create a volumetric encapsulation 
+                        for the specified plants (arbitrary free-form geometries), along with optimizing their placement on the agricultural system 
+                        based on the constraints of light and reachability.<br>
+                        Other things yet to be completed are adding the plant files to the code simultaneously (without user interaction) and applying the 
+                        code with extra constraints depending on each plant’s light and reachability. <br>
+                    </p>
+                        
+                    <h3>Implementation</h3>
 
-                    <div class="resp-portfolio-container" style="margin-bottom:-10%;">
-                        <div class="container">
-                            <img src="img/trossen/u2d2_dynamixel_connection.png" class="resp-portfolio-img" </img> <div
-                                class="resp-portfolio-img-caption" style="bottom:35%;">
-                            <p>PC to Dynamixel Connection (credit: Trossen Robotics)</p>
-                        </div>
+
+                    <p>To perform this Volumetric Encapsulation, I generated a code using Grasshopper and Python. The first part imports a geometry 
+                        from a selected path and transforms it into a mesh (another option would be opening a geometry file using Rhino). This code then 
+                        creates an Encapsulaton to the specified object. The After making this enclosure an independent geometry, it can also move 
+                        in all planes and rotate (roll, pitch, yaw) as specified by the user. The figure does not show every component of the code, but the 
+                        results are shown below. <br>
+                    </p>
+
+                    <div class="resp-portfolio-container"
+                    style="overflow:visible; padding-bottom:3%; top:5%; ">
+                    <div class="container">
+                        <img src="./images/Projects/Agpods/BroadCode.PNG" class="resp-portfolio-img"
+                            style="max-width:80%; left:10%" </img> <div
+                            class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
+                            <p>Grasshopper Code</p>
                     </div>
                 </div>
-
-                <p>The arms are controlled within a ROS framework that enables researchers to easily
-                    program behavioral experiments. I am using <a style="color:#1b03a3" target="_blank"
-                        href="https://moveit.ros.org/">MoveIt</a>
-                    to generate robot arm motion plans while avoiding collisions with both rodents
-                    and testing environment fixtures. All programming for this project is being
-                    completed in C++, but non-technical users will be able to specify trajectory
-                    sequences by manually manipulating the arms and saving each pose through a
-                    custom GUI created in <a style="color:#1b03a3" target="_blank"
-                        href="https://docs.ros.org/melodic/api/librviz_tutorial/html/index.html">Librviz</a>.
-                    Users will be able to place path constraints and virtual structures in the
-                    planning scene through this interface. In the future, waypoints may also be
-                    specified through a Python API, or loaded yaml config file.
-                </p>
-
-                <h3>Feature Demos:</h3>
-                <h4>1 - MoveIt Planning Interface</h4>
-                <p>Users can specify waypoints to one or more arms in the testing environment
-                    by using the <a style="color:#1b03a3" target="_blank"
-                        href="http://docs.ros.org/melodic/api/moveit_ros_planning_interface/html/classmoveit_1_1planning__interface_1_1MoveGroupInterface.html">MoveGroupInterface</a>
-                    class.
-                    A URDF file combining both arms in the testing environment was written to enable collision checking
-                    without
-                    external sensors. A relative position and orientation offset between the two arms can be passed in
-                    as
-                    a set of ROS parameters at runtime, enabling users to seamlessly change the positions of the arms
-                    for different experimental setups while still having collision checking. A demo showcasing both
-                    arms moving to a set of user-specified waypoints can be seen below.</p> -->
-
-                <!-- side and back waypoints -->
-                <div class="resp-portfolio-container" style="width:92%; left:5%;">
-                    <iframe class="resp-iframe" style="float:center;" src="https://vimeo.com/482456461"
-                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    <!-- <div class="resp-portfolio-img-caption" style="bottom:-5%;"><p>Video of pick and place task</p></div> -->
+        </div>
+                    <div class="resp-portfolio-container"
+                    style="overflow:visible; padding-bottom:25%; top:0%; ">
+                    <div class="container">
+                        <img src="./images/Projects/Agpods/Results.PNG" class="resp-portfolio-img"
+                            style="max-width:80%; left:10%" </img> <div
+                            class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
+                        <p>Rhino Results</p>
+                    </div>
                 </div>
+        </div>
+
+        <h3>Extra</h3>
 
 
+        <p>A python code has also been added to map out the geometries on the field in Rhino (Extracting the GUID of Grasshopper components
+            needed a separate Python code as well). The user can specify how many geometries neededhorizontally and vertically by changing 
+            simple number sliders.<br>
+        </p>
+
+        <div class="resp-portfolio-container"
+        style="overflow:visible; padding-bottom:17%; top:5%; ">
+        <div class="container">
+            <img src="./images/Projects/Agpods/Mapping.gif" class="resp-portfolio-img"
+                style="max-width:80%; left:10%" </img> <div
+                class="resp-portfolio-img-caption" style="float:left; bottom:-2%;">
+                <p>Geometry Mapping</p>
+        </div>
+    </div>
+</div>
             <!-- <h3>Live Rodent Trials</h3> -->
-            <p>Coming soon!</p>
+            <p>More Coming soon!</p>
             </p>
 
-            <!-- <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com"></a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com"></a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com"></a>
-                                    </strong>
-                                </li>
-                            </ul> -->
             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
                 Close</button>
         </div>
