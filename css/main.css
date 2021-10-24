@@ -2260,6 +2260,17 @@ html.no-csstransitions .home-content__main {
     left: 2rem;
     top: .3rem;
 }
+.timeline__bullet2 {
+    background: #ffffff;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-left: -0.75rem;
+    box-shadow: 0 0 0 9px #E9E9E9;
+    position: absolute;
+    left: 2rem;
+    top: .3rem;
+}
 
 .timeline__header .timeline__timeframe {
     font-size: 1.4rem;
