@@ -2247,6 +2247,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
     padding-left: 8rem;
     min-height: 19rem;
+    max-block-size: 2rem;
 }
 
 .timeline__bullet {
