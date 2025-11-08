@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="robots" content="noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PAGE TITLE -->
+    <title>Coming Soon – Fuzzy Text</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap" rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <style>
+        body {
+        margin: 0;
+        background-color: #000;
+        font-family: 'Mulish', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        }
+
+        canvas {
+        display: block;
+        max-width: 100%;
+        }
+
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="sub-page">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce-1"></div>
+            <div class="bounce-2"></div>
+            <div class="bounce-3"></div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BUTTON -->
+    <div class="navigation-button">
+        <a href="index.html">
+            <p>Back</p>
+        </a>
+    </div>
+
+    <!-- FUZZY TEXT CANVAS -->
+    <main>
+        <canvas id="fuzzyCanvas"></canvas>
+    </main>
+
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-inner scroll-animated-from-bottom">
+            <p>© <span id="year"></span> Joe Karam</p>
+            <p>
+                <a href="mailto:joeekaramm@outlook.com">Contact</a> |
+                <a href="https://www.linkedin.com/in/karamjoe" target="_blank">LinkedIn</a>
+            </p>
+            <i class="fa fa-angle-double-up scroll-top" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        const canvas = document.getElementById('fuzzyCanvas');
+        const ctx = canvas.getContext('2d');
+        const text = "Coming Soon";
+        const fontSize = 120;
+        const baseIntensity = 0.2;
+        const hoverIntensity = 0.5;
+        const fontFamily = "Mulish";
+        const color = "#FFFFFF";
+        let isHovering = false;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const offscreen = document.createElement('canvas');
+        const offCtx = offscreen.getContext('2d');
+        offCtx.font = `900 ${fontSize}px ${fontFamily}`;
+        const metrics = offCtx.measureText(text);
+        const width = Math.ceil(metrics.width);
+        const height = fontSize * 1.2;
+
+        offscreen.width = width;
+        offscreen.height = height;
+
+        offCtx.font = `900 ${fontSize}px ${fontFamily}`;
+        offCtx.fillStyle = color;
+        offCtx.textBaseline = 'top';
+        offCtx.fillText(text, 0, 0);
+
+        const fuzzRange = 30;
+
+        const draw = () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const intensity = isHovering ? hoverIntensity : baseIntensity;
+            const startX = (canvas.width - width) / 2;
+            const startY = (canvas.height - height) / 2;
+
+            for (let y = 0; y < height; y++) {
+                const dx = Math.floor(intensity * (Math.random() - 0.5) * fuzzRange);
+                ctx.drawImage(offscreen, 0, y, width, 1, startX + dx, startY + y, width, 1);
+            }
+
+            requestAnimationFrame(draw);
+        };
+
+        draw();
+
+        canvas.addEventListener('mousemove', e => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const withinX = x > (canvas.width - width) / 2 && x < (canvas.width + width) / 2;
+            const withinY = y > (canvas.height - height) / 2 && y < (canvas.height + height) / 2;
+            isHovering = withinX && withinY;
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            isHovering = false;
+        });
+    </script>
+</body>
+
+</html>

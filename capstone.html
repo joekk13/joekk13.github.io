@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="robots" content="noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- PAGE TITLE -->
+    <title>Robotic Agri-Gripper – Compliant and Intelligent Grasping</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+<body class="sub-page">
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="bounce-1"></div>
+            <div class="bounce-2"></div>
+            <div class="bounce-3"></div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION BUTTON -->
+    <div class="navigation-button">
+        <a href="index.html">
+            <p>Back</p>
+        </a>
+    </div>
+
+    <!-- LOGO -->
+    <div class="logo-fixed">
+        <img src="assets/img/portfolio/Capstone/Logo.png" alt="Logo" />
+    </div>
+
+    <!-- PORTFOLIO ITEM TYPE B -->
+    <div class="portfolio-item-b">
+        <div class="container-fluid">
+
+            <!-- HERO SECTION -->
+            <h1 class="scroll-animated-from-bottom">Robotic Agri-Gripper
+            </h1>
+            <h4 class="scroll-animated-from-bottom">
+                Compliant and Intelligent Grasping with Parallel Kinematic Mechanism
+            </h4>
+            <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Assembly.png"
+                alt="Assembly Image">
+
+            <!-- OVERVIEW -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Overview <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        Timeline: August 2021 – May 2022<br>
+                        Institution: Department of Mechanical and Mechatronic Engineering and
+                        Advanced Manufacturing, The California State University - Chico
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        As the global demand for food increases, traditional labor-intensive agricultural methods are
+                        becoming unsustainable.
+                        This project tackled that challenge by developing a parallel-kinematic robotic system with a
+                        compliant soft-material end-effector, capable of performing delicate pick-and-place tasks for
+                        food processing and packaging.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        The system combined mechanical design, manufacturing, and computer vision, aiming to
+                        automate repetitive manual work while maintaining the precision and care required for handling
+                        agricultural produce.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CHALLENGE -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>The Challenge <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        We sought to design a robotic system that:<br>
+                        - Accurately identify, pick, and place produce using computer vision.<br>
+                        - Maintain precision and compliance to avoid product damage.<br>
+                        - Integrate seamlessly with industrial robotics infrastructure (Omron Hornet 565).<br>
+                        - Be reliable and repeatable with minimal human interaction.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        This meant combining mechanical engineering and software integration into a
+                        single cohesive platform.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DESIGN -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Design & Chassis Development <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        The project explored multiple design paths covering chassis structure, camera and computer
+                        selection, and communication protocols.
+                        Initial chassis designs used aluminum extrusion for modularity but were later replaced due to
+                        rigidity considerations.
+                        The final design was built from ASTM-A500 steel tubing and plating, offering superior stiffness
+                        and durability under cyclic robotic loading.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        I was responsible for the structural modeling, simulation, and optimization of the chassis, as well as validating all
+                        mechanical assumptions through FEA and analytical comparison. In addition, I coordinated the sourcing and delivery of
+                        materials, and managed the manufacturing and welding process, ensuring structural accuracy during fabrication, a
+                        critical step given that the steel tubes used were extremely heavy and required precise, reinforced connections.<br><br>
+
+                        After welding, the structure consisted of two main assemblies: the chassis body and the top plate. I performed precise
+                        measurements and defined all hole placements for both the screws connecting the top plate to the chassis and those
+                        securing the robot to the top plate, guaranteeing structural stability and alignment. Once assembled, the robot/top plate assembly was
+                        mounted using a winch system onto the 7-foot-tall chassis, where hole alignment was perfect, and the entire system was
+                        successfully integrated into a single, rigid assembly.
+                    </p>
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/OldNew.png" alt="OldNew">
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Final.png"
+                        alt="Final"><br>
+                </div>
+            </div>
+
+            <!-- ANALYSIS -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Static & Dynamic Analysis <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        To verify performance, I conducted both static (hand-written + Solidworks) and dynamic (Solidworks) FEA studies.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Static Analysis:<br>
+                        Used analytical equations to predict plate deflection under the
+                        robot’s weight.<br>
+                        Results: analytical = 0.1557 mm deflection; FEA = 0.139 mm deflection, confirming high
+                        correlation between the two methods and successdul plate thickness and material selection.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Dynamic Analysis:<br>
+                        Performed frequency-response simulations using linear dynamic and harmonic studies.<br>
+                        Input: cyclic loading generated by end-effector motion.<br>
+                        On the other hand, a very crucial aspect was altering the study’s properties to a number of 10 Frequencies ranging from
+                        8.4 to 150 Hz [“Industrial Robotics Automation Catalog, Product Datasheets.” Omron Industrial Automation], along with a
+                        bandwidth of 0.6 around each frequency and a Linear Interpolation.<br>
+                        Identified safe operational frequency bands between 37–70 Hz and 120–140 Hz, ensuring structural
+                        resonance avoidance and stability during continuous operation.
+                    </p>
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/StaticFEA.png" alt="Static FEA">
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/DynamicFEA.png"
+                        alt="Dynamic FEA">
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Response Graph.png" alt="Response Graph"><br>
+                </div>
+            </div>
+
+            <!-- GRIPPER -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Compliant Gripper Design <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        The end-effector was the centerpiece of this project; a four-finger compliant gripper
+                        3D-printed with NinjaFlex filament.
+                        This soft material enabled gentle yet controlled gripping of produce, balancing flexibility and
+                        precision.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        The design was based on human grasp taxonomy research, ensuring effective contact points and
+                        adaptive deformation.
+                        The pneumatic actuation system provided consistent force control across varying object shapes
+                        and textures, ideal for food handling.
+                    </p>
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Gripper-1.png"
+                        alt="Gripper-1">
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Gripper-2.png"
+                        alt="Gripper-2"><br>
+                </div>
+            </div>
+
+            <!-- CONTROL -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Vision & Control System Integration <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        The system combined four key technologies:<br>
+                        - Omron ACE (Automation Control Environment)<br>
+                        - OPC Infrastructure<br>
+                        - OpenCV Algorithms (Python/C++ on VS Code)<br>
+                        - NVIDIA AGX Xavier SBC (Ubuntu 18.04)
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Through the OPC framework, data seamlessly flowed between the SBC, ACE, and MATLAB, enabling
+                        synchronized visual recognition and robotic motion.
+                        The system achieved > 90 % accuracy in 2D image processing, surpassing the performance goals
+                        set at the start of the project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- COLLABORATION -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Collaboration & My Role <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        As part of a multidisciplinary team of four engineers, I led the:<br>
+                        - Mechanical design, simulation, and assembly of the chassis.<br>
+                        - Design and integration of the compliant gripper with the delta robot.<br>
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Faculty Advisor: Dr. H. Sinan Bank<br>
+                        Team Members: Maryam Nassar, Travis Bybee, Joe Karam, Roque Martinez
+                    </p>
+                    <img class="img-responsive scroll-animated-from-bottom" src="assets/img/portfolio/Capstone/Team.png" alt="Team"><br>
+                </div>
+            </div>
+
+            <!-- IMPACT -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Impact & Future Work <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        The project demonstrated how parallel-kinematic robotics and soft materials can transform
+                        agricultural automation.
+                        As a first step toward an Industry 4.0 system within the Omron CoLab, the setup was designed for
+                        continuous improvement and future integration into a smart factory ecosystem featuring
+                        cyber-physical systems.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Planned extensions include:<br>
+                        - Implementing object-depth detection for 3D recognition.<br>
+                        - Exploring alternative gripper modalities such as vacuum pads for diverse produce handling.<br>
+                        - Expanding communication layers to enable full autonomous coordination among multiple robotic
+                        systems.
+                    </p>
+                </div>
+            </div>
+
+            <!-- RESULT -->
+            <div class="toggle-section">
+                <div class="toggle-header">
+                    <h4>Result <span class="toggle-icon">+</span></h4>
+                </div>
+                <div class="toggle-content">
+                    <p class="scroll-animated-from-bottom">
+                        Problem: Agricultural packaging required repetitive, delicate labor unsuitable for traditional
+                        automation.<br>
+                        Method: Designed a steel-framed robotic platform with a soft, compliant gripper and integrated
+                        computer-vision control.<br>
+                        Result: A validated, high-accuracy robotic pick-and-place system ready for adaptation into
+                        Industry 4.0 agricultural environments.
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        Credits:<br>
+                        Developed at the California State University, Chico<br>
+                        Department of Mechanical and Mechatronic Engineering and Advanced Manufacturing<br>
+                        Faculty Advisor: H. Sinan Bank<br>
+                        Team Members: Maryam Nassar, Travis Bybee, Joe Karam, Roque Martinez
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        <a class="button-link" href="assets/img/portfolio/Capstone/Capstone-Poster.pdf"
+                            target="_blank">
+                            View Project Poster (PDF)
+                        </a><br>
+                    </p>
+                    <p class="scroll-animated-from-bottom">
+                        <a class="button-link" href="https://drive.google.com/file/d/1Pb_H9aj1di5so9re9jBUhBbgcdEbrc53/view?usp=drive_link"
+                            target="_blank">
+                            Video Link 1
+                        </a><br>
+                        <a class="button-link" href="https://drive.google.com/file/d/1PiQqTJBsvfiGEYSC_t5HS_85xz8Y7hzo/view?usp=drive_link"
+                            target="_blank">
+                            Video Link 2
+                        </a><br>
+                        <a class="button-link" href="https://drive.google.com/file/d/1GAW26uIwJU9m0UuLcXlgF1LERFIgU1sv/view?usp=drive_link"
+                            target="_blank">
+                            Video Link 3
+                        </a><br>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-inner scroll-animated-from-bottom">
+            <p>© <span id="year"></span> Joe Karam</p>
+            <p>
+                <a href="mailto:joeekaramm@outlook.com">Contact</a> |
+                <a href="https://www.linkedin.com/in/karamjoe" target="_blank">LinkedIn</a>
+            </p>
+            <i class="fa fa-angle-double-up scroll-top" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
